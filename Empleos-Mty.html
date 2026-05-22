@@ -47,11 +47,18 @@
     .fecha {
       font-size: 0.9em;
       margin: 0px 0 0;
-      background: rgba(255,255,255,0.15);
+      /* Degradado que crea el efecto de línea de brillo blanca */
+      background: linear-gradient(90deg, #003f5c, #003f5c, #ffffff, #003f5c, #003f5c);
+      background-size: 200% auto;
       display: inline-block;
       padding: 6px 18px;
       border-radius: 30px;
       font-weight: 500;
+      /* Borde sutil brillante */
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      /* Asigna la animación de movimiento continuo */
+      animation: brilloMovimiento 3s linear infinite;
     }
 
     .intro-section {
@@ -161,6 +168,11 @@
 
     @keyframes fadeUp {
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes brilloMovimiento {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
     }
 
     .card-header {

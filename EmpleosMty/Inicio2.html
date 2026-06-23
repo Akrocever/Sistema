@@ -27,28 +27,29 @@
 
     .intro-section {
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      align-items: center;
+      flex-direction: column; /* Cambiado a columna para que la imagen vaya abajo */
+      gap: 20px;
+      align-items: center;    /* Centra los elementos horizontalmente */
       margin: 30px auto 50px;
       max-width: 900px;
     }
 
     .intro-text-content {
-      flex: 1;
-      min-width: 320px;
-      text-align: center;
+      width: 100%;
+      text-align: center;     /* Centra el texto */
     }
 
     .intro-text {
       font-size: 0.9em;
       line-height: 1.25;
-      margin: 10;
+      margin: 10px 0;
     }
 
     .intro-image {
-      flex: 0 0 100px;
-      max-width: 45%;
+      width: 100%;
+      max-width: 400px;       /* Controla el tamaño máximo de la imagen centrada */
+      display: flex;
+      justify-content: center;
     }
 
     .intro-image img {
@@ -70,7 +71,6 @@
       letter-spacing: 1px;
     }
 
-    /* Estilo corregido: Se aumentó el margen inferior de 10px a 50px */
     .title-green-border {
       font-family: 'Orbitron', sans-serif;
       text-align: center;
@@ -82,14 +82,9 @@
       border: 2px solid #25D366;
       border-radius: 8px;
       padding: 8px 20px;
-      margin: 40px auto 50px; /* <--- Aquí se hizo la separación */
+      margin: 40px auto 50px;
       display: block;
       width: max-content;
-    }
-
-    @media (max-width: 768px) {
-      .intro-section { flex-direction: column; }
-      .intro-image { max-width: 90%; margin: 20px auto; }
     }
 
     footer {
@@ -117,7 +112,7 @@
         </p>
       </div>
       <div class="intro-image">
-        <a href="https://sites.google.com/view/akrocever/sistema"><img src="https://i.ibb.co/G44M4tvp/Picsart-26-03-06-04-21-31-074.jpg" alt="Imagen introductoria"></a>
+        <img src="https://i.ibb.co/G44M4tvp/Picsart-26-03-06-04-21-31-074.jpg" alt="Imagen introductoria">
       </div>
     </div>
 

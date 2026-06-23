@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacantes Disponibles - Monterrey</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      margin: 30px auto 50px;
+      max-width: 900px;
+    }
+
+    .intro-text-content {
+      flex: 1;
+      min-width: 320px;
+      text-align: center;
+    }
+
+    .intro-text {
+      font-size: 0.9em;
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .intro-image {
+      flex: 0 0 100px;
+      max-width: 45%;
+    }
+
+    .intro-image img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      color: #004080;
+      font-size: 1.0em;
+      font-weight: 700;
+      margin: 20px 0 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Estilo nuevo para el borde verde */
+    .title-green-border {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      color: #004080;
+      font-size: 1.0em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid #25D366;
+      border-radius: 8px;
+      padding: 8px 20px;
+      margin: 40px auto 10px;
+      display: block;
+      width: max-content;
+    }
+
+    .puestos-container {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 50px;
+    }
+
+    .puestos-columns {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .puestos-column {
+      flex: 1;
+    }
+
+    .puestos-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .puestos-column li {
+      margin-bottom: 2px;
+      font-size: 0.9em;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .puestos-column li::before {
+      content: "•";
+      color: #0066cc;
+      font-size: 1.0em;
+      position: absolute;
+      left: 0;
+      top: 0px;
+    }
+
+    @media (max-width: 768px) {
+      .puestos-columns { flex-direction: column; gap: 30px; }
+      .intro-section { flex-direction: column; }
+      .intro-image { max-width: 90%; margin: 20px auto; }
+    }
+
+    footer {
+        text-align: center;
+        padding: 0.8rem 0.8rem;
+        background: #003366;
+        color: #ffffff;
+    }
+
+    footer p { 
+        margin-bottom: 0.6rem; 
+        opacity: 0.8; 
+        font-size: 0.60rem; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="intro-section">
+      <div class="intro-text-content">
+        <p class="intro-text">
+          Vacantes actualizadas. Dentro del sector industrial de Monterrey, Nuevo León. Nuestro compromiso es brindarte información sobre cada puesto, apoyarte en la programación de tu entrevista y en su proceso asegurándonos de que cuentes con el apoyo para tu nuevo empleo.
+        </p>
+      </div>
+      <div class="intro-image">
+        <a href="https://sites.google.com/view/akrocever/sistema"><img src="https://i.ibb.co/G44M4tvp/Picsart-26-03-06-04-21-31-074.jpg" alt="Imagen introductoria"></a>
+      </div>
+    </div>
+
+    <div class="title-green-border">56 EMPRESAS</div>
+
+    <h2 class="section-title">PUESTOS DISPONIBLES</h2>
+
+    <div class="puestos-container">
+      <div class="puestos-columns">
+        <div class="puestos-column">
+          <ul>
+            <li>Ayudante general</li>
+            <li>Operador de producción</li>
+            <li>Operador de máquina</li>
+            <li>Limpieza</li>
+            <li>Guardias de seguridad</li>
+            <li>Inspector de calidad</li>
+          </ul>
+        </div>
+        <div class="puestos-column">
+          <ul>
+            <li>Almacenista</li>
+            <li>Materialista</li>
+            <li>Montacarguista</li>
+            <li>Técnico</li>
+            <li>Soldador</li>
+            <li>Y otras más...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© Akrocever 2026 | Proyecto independiente impulsado por IA</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

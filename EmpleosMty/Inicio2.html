@@ -70,7 +70,7 @@
       letter-spacing: 1px;
     }
 
-    /* Estilo nuevo para el borde verde */
+    /* Estilo corregido: Se aumentó el margen inferior de 10px a 50px */
     .title-green-border {
       font-family: 'Orbitron', sans-serif;
       text-align: center;
@@ -82,53 +82,12 @@
       border: 2px solid #25D366;
       border-radius: 8px;
       padding: 8px 20px;
-      margin: 40px auto 10px;
+      margin: 40px auto 50px; /* <--- Aquí se hizo la separación */
       display: block;
       width: max-content;
     }
 
-    .puestos-container {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      margin-bottom: 50px;
-    }
-
-    .puestos-columns {
-      display: flex;
-      gap: 40px;
-      justify-content: space-between;
-    }
-
-    .puestos-column {
-      flex: 1;
-    }
-
-    .puestos-column ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .puestos-column li {
-      margin-bottom: 2px;
-      font-size: 0.9em;
-      padding-left: 20px;
-      position: relative;
-    }
-
-    .puestos-column li::before {
-      content: "•";
-      color: #0066cc;
-      font-size: 1.0em;
-      position: absolute;
-      left: 0;
-      top: 0px;
-    }
-
     @media (max-width: 768px) {
-      .puestos-columns { flex-direction: column; gap: 30px; }
       .intro-section { flex-direction: column; }
       .intro-image { max-width: 90%; margin: 20px auto; }
     }
@@ -143,7 +102,7 @@
     footer p { 
         margin-bottom: 0.6rem; 
         opacity: 0.8; 
-        font-size: 0.60rem; 
+        font-size: 0.65rem; 
     }
   </style>
 </head>
@@ -163,33 +122,6 @@
     </div>
 
     <div class="title-green-border">56 EMPRESAS</div>
-
-    <h2 class="section-title">PUESTOS DISPONIBLES</h2>
-
-    <div class="puestos-container">
-      <div class="puestos-columns">
-        <div class="puestos-column">
-          <ul>
-            <li>Ayudante general</li>
-            <li>Operador de producción</li>
-            <li>Operador de máquina</li>
-            <li>Limpieza</li>
-            <li>Guardias de seguridad</li>
-            <li>Inspector de calidad</li>
-          </ul>
-        </div>
-        <div class="puestos-column">
-          <ul>
-            <li>Almacenista</li>
-            <li>Materialista</li>
-            <li>Montacarguista</li>
-            <li>Técnico</li>
-            <li>Soldador</li>
-            <li>Y otras más...</li>
-          </ul>
-        </div>
-      </div>
-    </div>
 
   </div>
 

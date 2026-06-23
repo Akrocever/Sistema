@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Lexend', sans-serif; }
+
+        /* Animación de brillo espejo */
+        @keyframes brillo {
+            0% { left: -150%; }
+            50% { left: 150%; }
+            100% { left: 150%; }
+        }
+
+        .efecto-espejo {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .efecto-espejo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right, 
+                rgba(255, 255, 255, 0) 0%, 
+                rgba(255, 255, 255, 0.7) 50%, 
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            animation: brillo 3.5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col pt-32 md:pt-24">
+
+    <header class="bg-gray-200 text-slate-800 fixed top-0 left-0 right-0 py-3 md:h-24 shadow-md z-50 px-4 md:px-8 flex flex-col md:flex-row md:items-center justify-between border-b border-gray-300 gap-3 md:gap-0">
+        
+        <div class="flex flex-col min-w-0">
+            <h1 class="text-base md:text-xl font-bold tracking-tight text-slate-900 leading-tight">
+                Nuestro <span class="text-[#3f94c2]">portafolio</span> de empleos
+            </h1>
+            <span class="text-xs md:text-sm font-medium text-slate-600">vacantes disponibles</span>
+            
+            <div class="mt-1 self-start border border-[#3f94c2] rounded-md px-3 py-0.5 bg-sky-50/30 efecto-espejo shadow-[0_0_10px_rgba(63,148,194,0.2)]">
+    <span class="text-xs md:text-sm font-semibold text-[#3f94c2] tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+                    Martes 23 de Junio
+                </span>
+            </div>
+        </div>
+
+        <!-- Navegación con Botones Numéricos (1, 2, 3) -->
+<nav class="flex items-center space-x-3 md:space-x-5 self-end md:self-center">
+    <!-- Botón 1 -->
+    <a href="https://akrocever.github.io/Usuarios/00Entrada/Einv.html" target="contenedor-virtual" 
+       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
+       title="Inversión">
+        1
+    </a>
+
+    <!-- Botón 2 -->
+    <a href="https://akrocever.github.io/Usuarios/00Entrada/Ncs.html" target="contenedor-virtual" 
+       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
+       title="Negocios">
+        2
+    </a>
+
+    <!-- Botón 3 -->
+    <a href="https://akrocever.github.io/Usuarios/00Entrada/Gans.html" target="contenedor-virtual" 
+       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
+       title="Pagos">
+        3
+    </a>
+</nav>
+    </header>
+
+    <main class="flex-grow w-full h-[calc(100vh-6rem)] overflow-hidden">
+        <iframe name="contenedor-virtual" src="https://akrocever.github.io/Usuarios/Noticiask.html" class="w-full h-full border-none" title="Contenido de Oficina Virtual"></iframe>
+    </main>
+
+</body>
+</html>
+

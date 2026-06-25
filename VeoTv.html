@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Vertical</title>
+    <style>
+        /* Reset básico para eliminar espacios */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            font-family: sans-serif;
+        }
+
+        /* Contenedor de la galería */
+        .galeria-container {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* 1 columna en celular */
+            gap: 0; /* Totalmente pegadas, sin espacio */
+            width: 100%;
+            max-width: 1200px; /* Opcional: centra el contenido en pantallas gigantes */
+            margin: 0 auto;
+        }
+
+        /* Estilos para las imágenes */
+        .galeria-item img {
+            width: 100%;
+            height: auto;
+            display: block; /* Elimina el espacio blanco inferior por defecto de las imágenes */
+            object-fit: cover; /* Mantiene la proporción si decides darles una altura fija */
+        }
+
+        /* Responsive: Versión Computadora (Pantallas mayores a 768px) */
+        @media (min-width: 768px) {
+            .galeria-container {
+                grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="galeria-container">
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/C5LxTBv1/Picsart-26-06-24-19-39-27-124.jpg" alt="Imagen 1">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/G31Qwrmw/Picsart-26-06-24-18-01-32-980.png" alt="Imagen 2">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/jP1L9q7F/file-00000000fc6871f8b03ce091dd00b649.png" alt="Imagen 3">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/RTFn9ZYX/file-00000000fe04723094c0115f686e8354.png" alt="Imagen 4">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/S4X61mNj/file-00000000bb1071f8ad79110c01650314.png" alt="Imagen 5">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/gLSsQ6rv/file-00000000be3071fd820cb43c57748747.png" alt="Imagen 6">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/5xvdfDQn/file-0000000070e871f8aa1828025eac42ae.png" alt="Imagen 7">
+        </div>
+        <div class="galeria-item">
+            <img src="https://i.ibb.co/zV1qKMVq/file-00000000ae4871fda0f02b132c2efa69.png" alt="Imagen 8">
+        </div>
+    </div>
+
+</body>
+</html>
+

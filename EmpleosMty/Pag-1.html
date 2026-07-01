@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vacates de empleo Monterrey - Página 1</title>
+  <title>Vacantes Disponibles - Monterrey</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,9 +28,9 @@
     .dashboard {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
+      gap: 30px;
       max-width: 1200px;
-      margin: 20px auto 40px auto;
+      margin: 30px auto 40px auto;
       padding: 0 10px;
     }
 
@@ -54,7 +54,7 @@
       color: white;
       padding: 10px 20px;
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 1px;
       display: flex;
@@ -154,21 +154,22 @@
     .info-expandida {
       display: none;
       margin-top: 8px;
-      padding: 5px 5px;
+      padding: 5px 15px; /* Aumentamos el espacio interno para que se vea mejor */
       background: #f8f9fa;
       border: 1px solid #d0e0f0;
       border-radius: 8px;
-      font-size: 0.88rem;
-      line-height: 1.35;
+      font-size: 0.85rem;
+      line-height: 1.2; /* Ajustamos ligeramente para mejor lectura */
       color: #222;
       text-align: left;
-      max-width: 90%;
+      max-width: 100%; /* Cambiado de 90% a 100% para que use todo el ancho disponible */
       margin-left: auto;
       margin-right: auto;
+      box-sizing: border-box; /* Evita que el padding extra deforme la tarjeta */
     }
 
     .info-expandida ul {
-      padding-left: 24px;
+      padding-left: 10px;
       margin: 2px 0;
     }
 
@@ -225,7 +226,7 @@
         <div class="card-header">🟢 AISIN</div>
         <div class="card-body">
           <div class="desc">
-            <p>Fabricación de componentes automotrices...</p>
+            <p>Fabricación de componentes automotrices como transmisiones, bombas de agua/aceite, partes de motor y más...</p>
             <p>LUNES A JUEVES / TURNOS ROTATIVOS / 12 HRS.</p>
             <p>📍 Ciénega de Flores.</p>
           </div>
@@ -252,8 +253,15 @@
         </div>
       </div>
 
+      <!-- ALCO -->
       <div class="card" style="animation-delay: 0.5s;">
         <div class="card-header">🟢 ALCO</div>
+        
+        <!-- La imagen ahora se ubica aquí para tocar los bordes perfectamente -->
+        <img src="https://i.ibb.co/jkv7JJ8m/Picsart-26-06-30-22-52-30-821.png" 
+             alt="Portada Vacante Alco" 
+             style="width: 100%; height: auto; display: block;">
+
         <div class="card-body">
           <div class="desc">
             <p>Dedicada al procesamiento de empacado de pollo...</p>
@@ -313,7 +321,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="card" style="animation-delay: 0.5s;">
         <div class="card-header">🟢 BREMBO APODACA</div>
         <div class="card-body">

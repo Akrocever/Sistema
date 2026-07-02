@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regalos para ti</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: #ffffff;
+      color: #1e293b;
+      min-height: 100vh;
+      padding: 16px;
+      font-family: 'Orbitron', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── Animación de brillo ── */
+    @keyframes shineHorizontal {
+      0%   { transform: translateX(-180%) skewX(-15deg); }
+      100% { transform: translateX(180%)  skewX(-15deg); }
+    }
+
+    /* ── Animación flotante de regalos ── */
+    @keyframes floatAnimation {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    /* ── Header principal ── */
+    .main-header {
+      background: #003f5c;
+      color: white;
+      padding: 16px 20px;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 
+        0 0 0 4px #3e8fb8,
+        0 0 16px 6px rgba(62, 143, 184, 0.5),
+        0 0 32px 12px rgba(62, 143, 184, 0.3);
+    }
+
+    .main-header::before {
+      content: '';
+      position: absolute;
+      inset: -50% -120% -50% -120%;
+      background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.45) 45%, rgba(255,255,255,0.25) 50%, transparent 80%);
+      animation: shineHorizontal 6s linear infinite;
+      pointer-events: none;
+      transform: skewX(-15deg);
+    }
+
+    .main-header h1 {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── Contenedor de Emojis Animados ── */
+    .gifts-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 24px 0;
+    }
+
+    .floating-gift {
+      font-size: 4rem;
+      animation: floatAnimation 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    .floating-gift:nth-child(2) {
+      animation-delay: 1.5s;
+    }
+
+    /* ── Contenedor de Tarjetas en Columnas ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    /* Versión computadora: 2 columnas */
+    @media (min-width: 768px) {
+      .cards-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .goals-card {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 
+        0 0 0 4px #3f8fb8,
+        0 0 5px 4px rgba(63, 143, 184, 0.3),
+        0 0 24px 8px rgba(63, 143, 184, 0.2);
+      background: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .goals-header {
+      background: #3f8fb8;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+    }
+
+    .goals-header::before {
+      content: '';
+      position: absolute;
+      inset: -50% -120% -50% -120%;
+      background: linear-gradient(90deg, transparent 20%, rgba(255, 255, 255, 0.45) 45%, rgba(255, 255, 255, 0.25) 50%, transparent 80%);
+      animation: shineHorizontal 5.5s linear infinite;   
+      pointer-events: none;
+      transform: skewX(-15deg);
+    }
+
+    .card-body-text {
+      padding: 24px;
+      text-align: left;
+      font-family: 'Lexend', sans-serif;
+      flex-grow: 1;
+    }
+
+    .card-body-text p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #334155;
+      margin-bottom: 16px;
+    }
+
+    .card-body-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Estilo para palabras destacadas en azul de la marca */
+    .highlight-blue {
+      color: #3f8fb8;
+      font-weight: 700;
+    }
+
+    /* ── Sección de Cómo obtener tu obsequio (Abajo) ── */
+    .how-to-section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 
+        0 0 0 4px #003f5c,
+        0 0 12px rgba(0, 63, 92, 0.2);
+      margin-bottom: 32px;
+    }
+
+    .sub-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #003f5c;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+
+    /* ── Contenedor de Pasos ── */
+    .steps-container {
+      text-align: left;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .step-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 5px solid #003f5c;
+    }
+
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .step-number {
+      background: #003f5c;
+      color: white;
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      min-width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 16px;
+      font-size: 14px;
+    }
+
+    .step-content {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #334155;
+    }
+
+    .ready-box {
+      margin-top: 24px;
+      background: #f0f7fa;
+      border: 2px dashed #3f8fb8;
+      padding: 16px;
+      border-radius: 8px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #003f5c;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Recuadro de Aviso Importante ── */
+    .alert-section {
+      margin: 40px auto 20px;
+    }
+
+    .alert-card {
+      background: #fff7ed;
+      border-left: 5px solid #f97316;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 
+        0 0 0 4px #f97316,
+        0 0 12px rgba(249, 115, 22, 0.2);
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .alert-title {
+      font-family: 'Orbitron', sans-serif;
+      color: #c2410c;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    .alert-text {
+      color: #431407;
+      font-size: 14.5px;
+      line-height: 1.6;
+    }
+
+    html, body { width: 100%; overflow-x: hidden; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="main-header">
+    <h1>REGALOS para ti.</h1>
+  </div>
+
+  <div class="gifts-container">
+    <div class="floating-gift">🎁</div>
+    <div class="floating-gift">🎁</div>
+  </div>
+
+  <div class="cards-grid">
+    
+    <div class="goals-card">
+      <div class="goals-header">🖥️ Streaming VEO TV</div>
+      <div class="card-body-text">
+        <p>Obtén acceso <strong>gratuito durante 1 mes</strong> a una plataforma de entretenimiento en streaming con una amplia selección de <span class="highlight-blue">canales en vivo, películas, series, deportes y mucho más.</span></p>
+        <p>El servicio se proporciona mediante una aplicación (APK) compatible con dispositivos <strong> Android, tabletas y TVBox</strong> para Smart TV.</p>
+      </div>
+    </div>
+
+    <div class="goals-card">
+      <div class="goals-header">💵 Bono $200 pesos</div>
+      <div class="card-body-text">
+        <p>Obtén un <strong>BONO de apoyo adicional</strong>, como muestra de apoyo durante el proceso de tu nuevo empleo, podrás recibir un bono donativo adicional de <span class="highlight-blue">$200 pesos</span>, otorgado de manera independiente por el reclutador.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="how-to-section">
+    <div class="sub-title">¿Cómo obtener tu obsequio?</div>
+    <p style="margin-bottom: 16px; font-weight: 500; color: #1e293b; text-align: center; font-family: 'Lexend', sans-serif;">Para recibir este beneficio, sigue estos sencillos pasos:</p>
+    
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">01</div>
+        <div class="step-content">
+          <strong>Confirma tu interés</strong> comunicándote con el reclutador e indícale que deseas recibir el obsequio.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">02</div>
+        <div class="step-content">
+          Notifica al reclutador cuando te presentes a tu <strong>entrevista</strong>, para que pueda registrar tu asistencia.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">03</div>
+        <div class="step-content">
+          Informa al reclutador el día que te <strong>incorpores a laborar</strong>.
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-number">04</div>
+        <div class="step-content">
+          Mantente en contacto y, a partir de tu <strong>segundo día de trabajo</strong>, solicita el envío de tu obsequio.
+        </div>
+      </div>
+
+      <div class="ready-box">
+        Y listo ya puedes obtener tu obsequio🎁‼️.
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-section">
+    <div class="alert-card">
+      <div class="alert-title">¡IMPORTANTE!</div>
+      <div class="alert-text">
+        Este beneficio es un obsequio otorgado de manera independiente por el <strong>reclutador responsable</strong> de este sitio web. <strong>No forma parte</strong> de los beneficios ofrecidos por la agencia ni por la empresa, por lo que se solicita <strong>no mencionarlo</strong> ante ninguna de ellas.
+      </div>
+    </div>
+  </div>
+
+</div> 
+
+<footer style="
+  background: #3f8fb8;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  margin-top: 60px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+">
+  <div style="max-width: 1400px; margin: 0 auto;">
+    <p style="margin: 0; opacity: 0.95;">
+      © 2026 - Akrocever IA | Proyecto independiente impulsado con IA
+    </p>
+  </div>
+
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.15) 50%, transparent 80%);
+    animation: shineHorizontal 8s linear infinite;
+    pointer-events: none;
+  "></div>
+</footer>
+
+</body>
+</html>
+

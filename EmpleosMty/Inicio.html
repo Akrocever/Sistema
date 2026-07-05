@@ -41,9 +41,39 @@
             transform: skewX(-25deg);
             animation: brillo 3.5s infinite ease-in-out;
         }
+
+        /* Animación de latido suave para los botones */
+        @keyframes latidoSuave {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 12px rgba(63, 148, 194, 0.4);
+            }
+        }
+
+        .btn-palpitante {
+            animation: latidoSuave 2s infinite ease-in-out;
+        }
+        .btn-palpitante:active {
+            transform: scale(0.9) !important;
+        }
+
+        /* Animación de la flecha azul (desplazamiento horizontal controlado) */
+        @keyframes flechaSenalando {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        .flecha-animada {
+            color: #3f94c2;
+            animation: flechaSenalando 1.2s infinite ease-in-out;
+        }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col pt-32 md:pt-24">
+<body class="bg-gray-100 min-h-screen flex flex-col pt-[156px] md:pt-24">
 
     <header class="bg-gray-200 text-slate-800 fixed top-0 left-0 right-0 py-3 md:h-24 shadow-md z-50 px-4 md:px-8 flex flex-col md:flex-row md:items-center justify-between border-b border-gray-300 gap-3 md:gap-0">
         
@@ -54,41 +84,44 @@
             <span class="text-xs md:text-sm font-medium text-slate-600">vacantes disponibles 🟢</span>
             
             <div class="mt-1 self-start border border-[#003366] rounded-md px-3 py-0.5 bg-sky-50/30 efecto-espejo shadow-[0_0_10px_rgba(63,148,194,0.2)]">
-    <span class="text-xs md:text-sm font-semibold text-[#003366] tracking-wide" style="font-family: 'Orbitron', sans-serif;">
+                <span class="text-xs md:text-sm font-semibold text-[#003366] tracking-wide" style="font-family: 'Orbitron', sans-serif;">
                     Lunes 06 de Julio 2026
                 </span>
             </div>
         </div>
 
-        <!-- Navegación con Botones Numéricos (1, 2, 3) -->
-<nav class="flex items-center space-x-3 md:space-x-5 self-end md:self-center">
-    <!-- Botón 1 -->
-    <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-1.html" target="contenedor-virtual" 
-       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
-       title="Pagina 1">
-        1
-    </a>
+        <nav class="flex items-center space-x-3 md:space-x-5 self-center md:self-center">
+            
+            <div class="flex items-center space-x-2 pr-3">
+                <span class="text-black font-bold text-xs md:text-sm uppercase tracking-wider" style="font-family: 'Orbitron', sans-serif;">
+                    Ver empresas
+                </span>
+                <i class="fa-solid fa-arrow-right text-base md:text-lg flecha-animada"></i>
+            </div>
 
-    <!-- Botón 2 -->
-    <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-2.html" target="contenedor-virtual" 
-       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
-       title="Pagina 2">
-        2
-    </a>
+            <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-1.html" target="contenedor-virtual" 
+               class="btn-palpitante flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out focus:outline-none" 
+               title="Pagina 1">
+                1
+            </a>
 
-    <!-- Botón 3 -->
-    <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-3.html" target="contenedor-virtual" 
-       class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg shadow-sm hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out active:scale-90 focus:outline-none" 
-       title="Pagina 3">
-        3
-    </a>
-</nav>
+            <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-2.html" target="contenedor-virtual" 
+               class="btn-palpitante flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out focus:outline-none" 
+               title="Pagina 2">
+                2
+            </a>
+
+            <a href="https://akrocever.github.io/Sistema/EmpleosMty/Pag-3.html" target="contenedor-virtual" 
+               class="btn-palpitante flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-[#3f94c2] bg-white text-[#3f94c2] font-bold text-base md:text-lg hover:text-white hover:bg-[#3f94c2] hover:border-[#3f94c2] transition-all duration-150 ease-in-out focus:outline-none" 
+               title="Pagina 3">
+                3
+            </a>
+        </nav>
     </header>
 
-    <main class="flex-grow w-full h-[calc(100vh-6rem)] overflow-hidden">
+    <main class="flex-grow w-full h-[calc(100vh-156px)] md:h-[calc(100vh-6rem)] overflow-hidden">
         <iframe name="contenedor-virtual" src="https://akrocever.github.io/Sistema/EmpleosMty/Inicio2.html" class="w-full h-full border-none" title="Contenido de Oficina Virtual"></iframe>
     </main>
 
 </body>
 </html>
-

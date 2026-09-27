@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresas</title>
+  
+  <!-- Importar las fuentes Orbitron y Lexend desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* Configuración base */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #ffffff; /* Fondo blanco */
+      font-family: 'Lexend', sans-serif;
+      margin: 0;
+      padding: 30px 15px 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Contenedor principal para centrar el contenido */
+    .main-container {
+      max-width: 700px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Título Superior "EMPRESAS" con Fuente Orbitron */
+    .title-header {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: #000000; /* Color negro */
+      text-align: center;
+      letter-spacing: 1px;
+      margin: 0 0 10px 0;
+    }
+
+    /* Botón destacado "Agendar cita" */
+    .btn-agendar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background-color: #3f94c2; /* Azul azulado igual a la imagen */
+      color: #ffffff;
+      font-family: 'Lexend', sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(63, 148, 194, 0.25);
+      transition: all 0.2s ease;
+      margin-bottom: 25px;
+    }
+
+    .btn-agendar:hover {
+      background-color: #3480a8;
+      transform: translateY(-2px);
+    }
+
+    .btn-agendar:active {
+      transform: translateY(0);
+    }
+
+    /* Grid/Cuadrícula de botones de 2 columnas */
+    .companies-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+      gap: 20px;
+      width: 100%;
+    }
+
+    /* Columnas con línea divisoria superior punteada */
+    .column-block {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding-top: 15px;
+      border-top: 2px dashed #b0bec5; /* Línea punteada superior */
+    }
+
+    /* Botones de empresas individuales */
+    .btn-company {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 52px;
+      background-color: #ffffff;
+      color: #3f94c2;
+      border: 1.5px solid #3f94c2; /* Borde delgado azul */
+      border-radius: 12px;
+      padding: 10px 15px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .btn-company:hover {
+      background-color: #f0f8ff;
+      border-color: #2c7399;
+      transform: translateY(-1px);
+    }
+
+    /* Adaptación para celulares */
+    @media (max-width: 500px) {
+      .title-header {
+        font-size: 26px;
+      }
+
+      .btn-agendar {
+        font-size: 18px;
+        padding: 14px 15px;
+        border-radius: 14px;
+      }
+
+      .companies-grid {
+        gap: 12px; /* Espacio más ajustado entre columnas en celular */
+      }
+
+      .btn-company {
+        font-size: 16px;
+        min-height: 48px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    
+    <!-- Título principal -->
+    <h1 class="title-header">EMPRESAS</h1>
+
+    <!-- Botón Superior "Agendar cita" -->
+    <a href="https://google.com" target="_blank" class="btn-agendar">Agendar cita</a>
+
+    <!-- Cuadrícula de Botones en 2 Columnas -->
+    <div class="companies-grid">
+      
+      <!-- Columna Izquierda -->
+      <div class="column-block">
+        <a href="https://google.com" target="_blank" class="btn-company">AISIN</a>
+        <a href="https://google.com" target="_blank" class="btn-company">PIASA</a>
+      </div>
+
+      <!-- Columna Derecha -->
+      <div class="column-block">
+        <a href="https://google.com" target="_blank" class="btn-company">HUSSMANN</a>
+        <a href="https://akrocever.github.io/Sistema/Emp/Ys.html" target="_blank" class="btn-company">YSM</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

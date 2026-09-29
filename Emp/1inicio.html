@@ -29,7 +29,7 @@
 
     /* Contenedor principal para centrar el contenido */
     .main-container {
-      max-width: 700px;
+      max-width: 800px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -48,47 +48,13 @@
       margin: 0 0 10px 0;
     }
 
-    /* Botón destacado "Agendar cita" */
-    .btn-agendar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      background-color: #3f94c2; /* Azul azulado igual a la imagen */
-      color: #ffffff;
-      font-family: 'Lexend', sans-serif;
-      font-size: 20px;
-      font-weight: 500;
-      text-decoration: none;
-      padding: 16px 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(63, 148, 194, 0.25);
-      transition: all 0.2s ease;
-      margin-bottom: 25px;
-    }
-
-    .btn-agendar:hover {
-      background-color: #3480a8;
-      transform: translateY(-2px);
-    }
-
-    .btn-agendar:active {
-      transform: translateY(0);
-    }
-
-    /* Grid/Cuadrícula de botones de 2 columnas */
+    /* Grid/Cuadrícula de botones */
     .companies-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-      gap: 20px;
+      /* Por defecto (Celular): 2 columnas por fila */
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 15px;
       width: 100%;
-    }
-
-    /* Columnas con línea divisoria superior punteada */
-    .column-block {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
       padding-top: 15px;
       border-top: 2px dashed #b0bec5; /* Línea punteada superior */
     }
@@ -120,20 +86,18 @@
       transform: translateY(-1px);
     }
 
-    /* Adaptación para celulares */
+    /* Versión para Computadora / Pantallas grandes: 4 columnas por fila */
+    @media (min-width: 600px) {
+      .companies-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+
+    /* Ajuste para pantallas muy pequeñas (celulares chicos) */
     @media (max-width: 500px) {
       .title-header {
         font-size: 26px;
-      }
-
-      .btn-agendar {
-        font-size: 18px;
-        padding: 14px 15px;
-        border-radius: 14px;
-      }
-
-      .companies-grid {
-        gap: 12px; /* Espacio más ajustado entre columnas en celular */
       }
 
       .btn-company {
@@ -151,24 +115,12 @@
     <!-- Título principal -->
     <h1 class="title-header">EMPRESAS</h1>
 
-    <!-- Botón Superior "Agendar cita" -->
-    <a href="https://google.com" target="_blank" class="btn-agendar">Agendar cita</a>
-
-    <!-- Cuadrícula de Botones en 2 Columnas -->
+    <!-- Cuadrícula de Botones -->
     <div class="companies-grid">
-      
-      <!-- Columna Izquierda -->
-      <div class="column-block">
-        <a href="https://google.com" target="_blank" class="btn-company">AISIN</a>
-        <a href="https://akrocever.github.io/Sistema/Emp/Pasa.html" target="_blank" class="btn-company">PIASA</a>
-      </div>
-
-      <!-- Columna Derecha -->
-      <div class="column-block">
-        <a href="https://google.com" target="_blank" class="btn-company">HUSSMANN</a>
-        <a href="https://akrocever.github.io/Sistema/Emp/Ys.html" target="_blank" class="btn-company">YSM</a>
-      </div>
-
+      <a href="https://google.com" target="_blank" class="btn-company">AISIN</a>
+      <a href="https://google.com" target="_blank" class="btn-company">HUSSMANN</a>
+      <a href="https://akrocever.github.io/Sistema/Emp/Pasa.html" target="_blank" class="btn-company">PIASA</a>
+      <a href="https://akrocever.github.io/Sistema/Emp/Ys.html" target="_blank" class="btn-company">YSM</a>
     </div>
 
   </div>

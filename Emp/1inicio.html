@@ -3,127 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Empresas</title>
+  <title>Vacantes Disponibles - Monterrey</title>
   
-  <!-- Importar las fuentes Orbitron y Lexend desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* Configuración base */
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      background-color: #ffffff; /* Fondo blanco */
       font-family: 'Lexend', sans-serif;
       margin: 0;
-      padding: 30px 15px 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      min-height: 100vh;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.2;
     }
 
-    /* Contenedor principal para centrar el contenido */
-    .main-container {
-      max-width: 800px;
-      width: 100%;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    .intro-section {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column; /* Cambiado a columna para que la imagen vaya abajo */
       gap: 20px;
+      align-items: center;    /* Centra los elementos horizontalmente */
+      margin: 30px auto 50px;
+      max-width: 900px;
     }
 
-    /* Título Superior "EMPRESAS" con Fuente Orbitron */
-    .title-header {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 25px;
-      font-weight: 600;
-      color: #000000; /* Color negro */
-      text-align: center;
-      letter-spacing: 1px;
-      margin: 0 0 10px 0;
-    }
-
-    /* Grid/Cuadrícula de botones */
-    .companies-grid {
-      display: grid;
-      /* Por defecto (Celular): 2 columnas por fila */
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 15px;
+    .intro-text-content {
       width: 100%;
-      padding-top: 15px;
-      border-top: 2px dashed #b0bec5; /* Línea punteada superior */
+      text-align: center;     /* Centra el texto */
     }
 
-    /* Botones de empresas individuales */
-    .btn-company {
+    .intro-text {
+      font-size: 0.9em;
+      line-height: 1.25;
+      margin: 10px 0;
+    }
+
+    .intro-image {
+      width: 100%;
+      max-width: 400px;       /* Controla el tamaño máximo de la imagen centrada */
       display: flex;
       justify-content: center;
-      align-items: center;
+    }
+
+    .intro-image img {
       width: 100%;
-      min-height: 52px;
-      background-color: #ffffff;
-      color: #3f94c2;
-      border: 1.5px solid #3f94c2; /* Borde delgado azul */
-      border-radius: 12px;
-      padding: 10px 15px;
-      font-family: 'Lexend', sans-serif;
-      font-size: 18px;
-      font-weight: 500;
-      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
       text-align: center;
-      transition: all 0.2s ease;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+      color: #004080;
+      font-size: 1.0em;
+      font-weight: 700;
+      margin: 20px 0 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .btn-company:hover {
-      background-color: #f0f8ff;
-      border-color: #2c7399;
-      transform: translateY(-1px);
+    .title-green-border {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      color: #004080;
+      font-size: 1.0em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border: 2px solid #25D366;
+      border-radius: 8px;
+      padding: 8px 20px;
+      margin: 40px auto 50px;
+      display: block;
+      width: max-content;
     }
 
-    /* Versión para Computadora / Pantallas grandes: 4 columnas por fila */
-    @media (min-width: 600px) {
-      .companies-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-      }
+    footer {
+        text-align: center;
+        padding: 0.8rem 0.8rem;
+        background: #003366;
+        color: #ffffff;
     }
 
-    /* Ajuste para pantallas muy pequeñas (celulares chicos) */
-    @media (max-width: 500px) {
-      .title-header {
-        font-size: 26px;
-      }
-
-      .btn-company {
-        font-size: 16px;
-        min-height: 48px;
-        border-radius: 10px;
-      }
+    footer p { 
+        margin-bottom: 0.6rem; 
+        opacity: 0.8; 
+        font-size: 0.65rem; 
     }
   </style>
 </head>
 <body>
 
-  <div class="main-container">
-    
-    <!-- Título principal -->
-    <h1 class="title-header">EMPRESAS</h1>
+  <div class="container">
 
-    <!-- Cuadrícula de Botones -->
-    <div class="companies-grid">
-      <a href="https://google.com" target="_blank" class="btn-company">AISIN</a>
-      <a href="https://google.com" target="_blank" class="btn-company">HUSSMANN</a>
-      <a href="https://akrocever.github.io/Sistema/Emp/Pasa.html" target="_blank" class="btn-company">PIASA</a>
-      <a href="https://akrocever.github.io/Sistema/Emp/Ys.html" target="_blank" class="btn-company">YSM</a>
+    <div class="intro-section">
+      <div class="intro-text-content">
+        <p class="intro-text">
+          ¡Éxito!
+        </p>
+      </div>
+      <div class="intro-image">
+        <img src="https://i.ibb.co/hRdrqtfh/Picsart-26-05-30-20-21-36-686.jpg" alt="Imagen introductoria">
+      </div>
     </div>
 
+    <div class="title-green-border">87 EMPRESAS</div>
+
   </div>
+
+  <footer>
+    <p>© Akrocever 2026 | Proyecto independiente impulsado por IA</p>
+    <p>Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>

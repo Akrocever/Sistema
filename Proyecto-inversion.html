@@ -482,10 +482,10 @@
 
   <!-- MODAL / RECUADRO EMERGENTE -->
   <div id="legalModal" class="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 hidden">
-    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative max-h-[80vh] flex flex-col">
+    <div class="bg-white rounded-2xl max-w-2xl w-full p-6 shadow-2xl relative max-h-[85vh] flex flex-col">
       <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 text-2xl font-bold">&times;</button>
       <h3 id="modalTitle" class="text-xl font-bold mb-4 text-[#003366] font-['Orbitron']">Título</h3>
-      <div id="modalContent" class="text-gray-600 text-sm overflow-y-auto space-y-3 lexend-normal text-left pr-2">
+      <div id="modalContent" class="text-gray-700 text-sm overflow-y-auto space-y-4 lexend-normal text-left pr-3 leading-relaxed">
         <!-- Contenido dinámico -->
       </div>
       <div class="mt-6 text-center">
@@ -509,43 +509,52 @@
       item.classList.toggle('active');
     }
 
-    // Funciones para manejar los modales del pie de página
+    // Funciones para manejar los modales del pie de página con texto estructurado
     const modalData = {
       privacidad: {
         title: "Aviso de Privacidad",
-        content: "1. Introducción 
-El presente Aviso de Privacidad establece los términos en que Akrocever usa y protege la información que es proporcionada por sus usuarios al momento de utilizar la plataforma. Estamos comprometidos con la seguridad de los datos de nuestros usuarios o de sus dispositivos. 
+        content: `
+          <p><strong>1. Introducción</strong><br>
+          El presente Aviso de Privacidad establece los términos en que Akrocever usa y protege la información que es proporcionada por sus usuarios al momento de utilizar la plataforma. Estamos comprometidos con la seguridad de los datos de nuestros usuarios o de sus dispositivos.</p>
 
-2. Información que recopilamos sobre usted 
-Recopilamos información sólo para identificarlo como usuario de nuestra plataforma. 
-Recopilamos la siguiente información:
-● Nombre
-● Correo Electrónico 
-Uso de la información recogida 
-Utilizamos sus datos para: 
-● Nombre: Conocer cómo nos referimos a usted en mensaje personalizado y cómo se muestra su identidad en la plataforma.
-● Correo electrónico: Será utilizado para enviar avisos y notificaciones relacionadas con cualquier movimiento, actividad u operación que el usuario realice dentro de la plataforma. 
+          <p><strong>2. Información que recopilamos sobre usted</strong><br>
+          Recopilamos información sólo para identificarlo como usuario de nuestra plataforma.<br>
+          Recopilamos la siguiente información:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>Nombre</li>
+            <li>Correo Electrónico</li>
+          </ul>
+          <p><strong>Uso de la información recogida</strong><br>
+          Utilizamos sus datos para:</p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li><strong>Nombre:</strong> Conocer cómo nos referimos a usted en mensaje personalizado y cómo se muestra su identidad en la plataforma.</li>
+            <li><strong>Correo electrónico:</strong> Será utilizado para enviar avisos y notificaciones relacionadas con cualquier movimiento, actividad u operación que el usuario realice dentro de la plataforma.</li>
+          </ul>
 
-3. Información que compartimos sobre usted 
-Akrocever no comparte ningún dato proporcionado por nuestros usuarios con proveedores, clientes, ni otro componente externo a Akrocever. 
-Akrocever no requiere que sus miembros proporcionen datos personales sensibles, tales como la CURP o cualquier identificación oficial, durante el proceso de registro. Esta medida tiene como objetivo salvaguardar la información de los usuarios, prevenir el robo de identidad y garantizar un entorno digital seguro y confiable. 
+          <p><strong>3. Información que compartimos sobre usted</strong><br>
+          Akrocever no comparte ningún dato proporcionado por nuestros usuarios con proveedores, clientes, ni otro componente externo a Akrocever.<br>
+          Akrocever no requiere que sus miembros proporcionen datos personales sensibles, tales como la CURP o cualquier identificación oficial, durante el proceso de registro. Esta medida tiene como objetivo salvaguardar la información de los usuarios, prevenir el robo de identidad y garantizar un entorno digital seguro y confiable.</p>
 
-4. Enlaces a Terceros 
-Akrocever contiene enlace solamente a nuestros números de soporte mediante WhatsApp, para que se pueda poner en contacto cuando usted necesite ayuda o dudas que tenga para ingresar a la plataforma. 
+          <p><strong>4. Enlaces a Terceros</strong><br>
+          Akrocever contiene enlace solamente a nuestros números de soporte mediante WhatsApp, para que se pueda poner en contacto cuando usted necesite ayuda o dudas que tenga para ingresar a la plataforma.</p>
 
-5. Modificaciones de la política de privacidad 
-Este Aviso de Privacidad puede ser actualizado en cualquier momento mostrando la fecha de la última actualización. En caso de ser requerido por la legislación competente o en efectos solicitados por el sistema donde hemos desarrollado nuestra plataforma, solicitaremos su consentimiento para aprobar dichas solicitudes. Este aviso ha sido actualizado el 12 de Octubre de 2026. 
+          <p><strong>5. Modificaciones de la política de privacidad</strong><br>
+          Este Aviso de Privacidad puede ser actualizado en cualquier momento mostrando la fecha de la última actualización. En caso de ser requerido por la legislación competente o en efectos solicitados por el sistema donde hemos desarrollado nuestra plataforma, solicitaremos su consentimiento para aprobar dichas solicitudes. Este aviso ha sido actualizado el 12 de Octubre de 2026.</p>
 
-©Acrocever 2026 | Proyecto independiente impulsado por IA
-Todos los derechos reservados."
+          <p class="text-xs text-gray-500 text-center mt-4">©Acrocever 2026 | Proyecto independiente impulsado por IA<br>Todos los derechos reservados.</p>
+        `
       },
       terminos: {
-        title: "Términos y Condiciones",
-        content: "El uso de la plataforma Akrocever implica la aceptación de nuestros términos operativos. Las inversiones y participación en campañas publicitarias conllevan rendimientos variables basados en el mercado. Los pagos se programan de acuerdo a las políticas de liberación del fondo operativo y el usuario reconoce los riesgos asociados a inversiones de alta rentabilidad."
+        title: "Términos y condiciones",
+        content: `
+          <p>El uso de la plataforma Akrocever implica la aceptación de nuestros términos operativos. Las inversiones y participación en campañas publicitarias conllevan rendimientos variables basados en el mercado. Los pagos se programan de acuerdo a las políticas de liberación del fondo operativo y el usuario reconoce los riesgos asociados a inversiones de alta rentabilidad.</p>
+        `
       },
       legal: {
-        title: "Aviso Legal",
-        content: "Akrocever opera como un sistema de vinculación empresarial y gestión publicitaria digital. Este sitio web tiene fines informativos y de colaboración participativa. No somos una institución financiera regulada, sino un modelo de economía colaborativa enfocado en optimizar el alcance de vacantes laborales en México y Latinoamérica."
+        title: "Aviso legal",
+        content: `
+          <p>Akrocever opera como un sistema de vinculación empresarial y gestión publicitaria digital. Este sitio web tiene fines informativos y de colaboración participativa. No somos una institución financiera regulada, sino un modelo de economía colaborativa enfocado en optimizar el alcance de vacantes laborales en México y Latinoamérica.</p>
+        `
       }
     };
 
@@ -555,7 +564,7 @@ Todos los derechos reservados."
       const contentEl = document.getElementById('modalContent');
       
       titleEl.innerText = modalData[type].title;
-      contentEl.innerHTML = `<p>${modalData[type].content}</p>`;
+      contentEl.innerHTML = modalData[type].content;
       
       modal.classList.remove('hidden');
     }
@@ -565,7 +574,6 @@ Todos los derechos reservados."
       modal.classList.add('hidden');
     }
 
-    // Cerrar modal haciendo clic fuera del contenido
     window.onclick = function(event) {
       const modal = document.getElementById('legalModal');
       if (event.target === modal) {

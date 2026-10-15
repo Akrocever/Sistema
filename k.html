@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akrocever</title>
+    
+    <!-- Librerías de Estilo e Iconos -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 m-0">
+
+    <header class="bg-[#0f172a] text-white fixed top-0 left-0 right-0 h-16 shadow-xl z-50 px-4 md:px-8 flex items-center justify-between border-b border-slate-800">
+        <!-- Contenedor principal del perfil -->
+        <div class="flex items-center gap-3">
+            <!-- Imagen de perfil con borde blanco circular -->
+            <img src="https://i.ibb.co/TM6Q259h/IMG-20260623-205941-812.jpg" alt="Perfil" class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm">
+            
+            <!-- Contenedor de los textos -->
+            <div class="flex flex-col justify-center">
+                <!-- Primera línea: ID y ¡Hola! -->
+                <div class="flex items-center gap-2">
+                    <span class="text-cyan-400 text-sm font-bold" style="font-family: 'Orbitron', sans-serif;">Hola!</span>
+                    <span class="text-white text-sm font-normal" style="font-family: 'Lexend', sans-serif;">Bienvenido/a!</span>
+                </div>
+                
+                <!-- Segunda línea: Nombre -->
+                <span class="text-blue-400 text-base font-bold leading-tight" style="font-family: 'Orbitron', sans-serif;">a Akrocever</span>
+            </div>
+        </div>
+
+        <nav class="flex items-center space-x-3 md:space-x-5">
+            <!-- Botón 1: Inversión -->
+            <a href="https://akrocever.github.io/l/inversion.html" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Inversión">
+                <i class="fa-solid fa-chart-line text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
+            </a>
+
+            <!-- Botón 2: Vacantes / Empleo -->
+            <a href="https://akrocever.github.io/l/reclutador.html" target="contenedor-virtual" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Vacantes">
+                <i class="fa-solid fa-briefcase text-base md:text-lg text-blue-400 group-hover:scale-110 transition-transform"></i>
+            </a>
+
+            <!-- Botón 3: Nuevo botón de usuario (independiente _blank) -->
+            <a href="https://akrocever.github.io/user/login.html" target="_blank" 
+               class="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-800 transition-all duration-150 ease-in-out group active:scale-90 active:bg-slate-700 focus:outline-none" 
+               title="Usuario">
+                <i class="fa-solid fa-user text-base md:text-lg text-cyan-400 group-hover:scale-110 transition-transform"></i>
+            </a>
+        </nav>       
+    </header>
+
+    <main class="w-full h-[calc(100vh-4rem)] mt-16 overflow-hidden">
+        <iframe name="contenedor-virtual" src="https://akrocever.github.io/l/inicio.html" class="w-full h-full border-none" title="Contenido de Oficina Virtual"></iframe>
+    </main>
+
+</body>
+</html>
